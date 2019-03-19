@@ -4,15 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <title>Psychic game</title>
-  <link rel="stylesheet" href="Assets/css/style.css">
-    <script src="main.js"></script>
-
 </head>
 
 <body>
 
     <header>
-        <h1 style="border:2px solid rgb(17, 16, 17); background-color: yellowgreen; width: 600PX;text-align: center;"> Psychic game</h1>
+        <h1 style="border:2px solid rgb(17, 16, 17); background-color: yellowgreen; width: 600PX;text-align: center;"> Best selling artist of the 90s</h1>
         
     </header>
 
@@ -30,28 +27,35 @@
 
   <script type="text/javascript">
 
-  //3. Guess what letter I'm thinking of
+ //2. Choose a theme for your game! In the demo, we picked an 80s theme: 80s questions, 80s sound and an 80s aesthetic. You can choose any subject for your theme, though, so be creative!
 
-//4. Wins: (# of times the user has guessed the letter correctly)
+//3. Use key events to listen for the letters that your players will type.
 
-//5. Losses: (# of times the user has failed to guess the letter correctly after exhausting all guesses)
+///4. Display the following on the page:
 
-//6. Guesses Left: (# of guesses left. This will update)
+///5. Press any key to get started!
 
-//7. Your Guesses So Far: (the specific letters that the user typed. Display these until the user either wins or loses.)
+//6. Wins: (# of times user guessed the word correctly).
 
-//8. When the player wins, increase the Wins counter and start the game over again (without refreshing the page).
+ //  * If the word is `madonna`, display it like this when the game starts: `_ _ _ _ _ _ _`.
 
-//9. When the player loses, increase the Losses counter and restart the game without a page refresh (just like when the user wins).
+  // * As the user guesses the correct letters, reveal them: `m a d o _  _ a`.
+
+//7. Number of Guesses Remaining: (# of guesses remaining for the user).
+
+//8. Letters Already Guessed: (Letters the user has guessed, displayed like `L Z Y H`).
+
+//9. After the user wins/loses the game should automatically choose another word and make the user play it.
 
     // Creates an array that lists out all of the options letters the users will choose from.
-    var computerChoices = ["a", "b", "d", "e", "f", "g", "e", "h", "i", "j", "k", "l", "m", "n", "o", "q", "w", "y", "z"];
+    var computerChoices = ["Elton John", "Michael Jackson", "Elvis Presley", "Beatles"];
 
     // Creating variables to hold the number of wins, losses, and guesses left .They start at 0.
     var wins = 0;
     var losses = 0;
     var guessesLeft = 6;
     var guessedLetter = [];
+    var computerC = [];
 
     // Create variables that hold references to the places in the HTML where we want to display things.
     var directionsText = document.getElementById("directions-text");
@@ -74,9 +78,12 @@
 
       // Randomly chooses a choice from the options array. This is the Computer's guess.
       var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+      
+       //use indexof, create 
 
-     
+      //Compare the letter enter by user with the letter in the array computer ch
 
+   
       // This logic determines the outcome of the game (win/loss), and increments the appropriate number. defines the wins options
         
         if (userGuess === computerGuess ) 
