@@ -1,6 +1,6 @@
 # Word-Guess-Game
 Word Guess Game
-All the code is in one file. file name psyhic.html
+All the code is in one file. file name index.html
 
 
 I have create a folder named saved where the index.html is linked. The CSS and java files are in Assets folder. 
